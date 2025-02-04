@@ -1,0 +1,151 @@
+<div class="top-bar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="contact-info">
+      <a href="tel:+254742002872" class="text-white"><i class="bi bi-telephone-fill"></i> +254 742 002 872</a>
+      <a href="mailto:info@tawaleeholdings.co.ke" class="text-white ms-3"><i class="bi bi-envelope-fill"></i> info@tawaleeholdings.co.ke</a>
+    </div>
+    <div class="social-icons">
+      <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white ms-2"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-white ms-2"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-white ms-2"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand text-dark" href="/" style="color: #002863 !important;">Tawalee Holdings LTD</a>
+    <button 
+      class="navbar-toggler ms-auto border-0" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-dark" href="/">HOME</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="/about">ABOUT</a></li>
+        <li class="nav-item dropdown">
+          <a 
+            class="nav-link dropdown-toggle text-dark" 
+            href="#" 
+            id="servicesDropdown" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false"
+          >
+            SERVICES & MORE
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/services">SERVICES</a></li>
+            <li><a class="dropdown-item" href="/shop">SHOP</a></li>
+            <li><a class="dropdown-item" href="/testimonials">TESTIMONIALS & PARTNERS</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link text-dark" href="/contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Top Bar Styling */
+  .top-bar {
+    background-color: #002863; /* Dark background like acidic.co.ke */
+    padding: 5px 0;
+  }
+
+  .top-bar .contact-info a, .top-bar .social-icons a {
+    text-decoration: none;
+    color: #FF7F00;
+  }
+
+  .top-bar .contact-info a:hover, .top-bar .social-icons a:hover {
+    color: #ffe400; /* A lighter shade of orange for hover */
+  }
+
+  .top-bar .bi {
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+
+  /* Navbar Styling */
+  .navbar {
+    background-color: white; /* White background for better visibility */
+    border-bottom: 2px solid #FF7F00; /* Orange border at the bottom */
+  }
+
+  /* Navbar brand styling */
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  /* Navbar link styling */
+  .navbar .nav-link {
+    color: #002863 !important;
+    font-weight: 700;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+
+  /* Hover effect for links */
+  .navbar .nav-link:hover {
+    color: red !important; /* Lighter shade for hover */
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  /* Active link styling */
+  .navbar .nav-link.active {
+    color: red !important;
+    font-weight: bold;
+  }
+
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    background-color: white; /* White background for dropdown */
+    border: none;
+    border-radius: 5px;
+  }
+
+  /* Dropdown menu items */
+  .dropdown-menu .dropdown-item {
+    color: #002863;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    background-color: white;
+    color: #002863;
+  }
+
+  /* Navbar toggler icon color for small screens */
+  .navbar-toggler {
+    border-color: #FF7F00;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FF7F00' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  /* Navbar menu background color on small screens */
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: white; /* Light background for mobile view */
+      padding: 10px;
+    }
+    .top-bar .container {
+      flex-direction: column;
+    }
+    .top-bar .contact-info {
+      margin-bottom: 10px;
+    }
+  }
+</style>

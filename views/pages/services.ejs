@@ -1,0 +1,60 @@
+<!-- Services Page -->
+<div class="text-center">
+  <h2>Our Services</h2>
+  <p>At Tawalee Holdings Limited, we offer a diverse range of services tailored to enhance your business operations, branding, and IT infrastructure. Here's an overview of our offerings:</p>
+
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-pencil-square" style="font-size: 3rem; color: #007BFF;"></i> <!-- Office Supplies Icon -->
+      <h4 class="mt-2">Office Supplies</h4>
+      <p>We provide a comprehensive selection of office stationery and consumables to keep your workplace running smoothly.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-gear-wide-connected" style="font-size: 3rem; color: #007BFF;"></i> <!-- IT Services Icon -->
+      <h4 class="mt-2">IT Services</h4>
+      <p>Our IT services include system maintenance, network solutions, cybersecurity, and technical support to keep your business connected and secure.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-megaphone" style="font-size: 3rem; color: #007BFF;"></i> <!-- Branding & Marketing Icon -->
+      <h4 class="mt-2">Branding & Marketing</h4>
+      <p>From creative strategies to advertising, we help elevate your brand's presence with impactful marketing solutions.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-printer" style="font-size: 3rem; color: #007BFF;"></i> <!-- Printing Services Icon -->
+      <h4 class="mt-2">Printing Services</h4>
+      <p>We offer high-quality printing services for all your business needs, including brochures, business cards, and promotional materials.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-pc-display" style="font-size: 3rem; color: #007BFF;"></i> <!-- Electronics Supply Icon -->
+      <h4 class="mt-2">Electronics Supply</h4>
+      <p>Supply of electronics like printers, toners, and other office gadgets to ensure your technology needs are met.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-envelope" style="font-size: 3rem; color: #007BFF;"></i> <!-- Corporate Communication Icon -->
+      <h4 class="mt-2">Corporate Communication</h4>
+      <p>We help manage your organization's internal and external communications, crafting messages that resonate with your stakeholders.</p>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
+<!-- Scroll to Top Button Script -->
+<script>
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = 'flex';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>

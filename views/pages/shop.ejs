@@ -1,0 +1,201 @@
+<!-- Shop Page -->
+<div class="text-center mt-5">
+  <h2>Shop with Us</h2>
+  <p>Explore our range of premium technology products available for purchase.</p>
+
+  <!-- Search Section -->
+  <div class="mb-4">
+    <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." onkeyup="searchProducts()">
+    <button class="btn btn-primary mt-2" onclick="searchProducts()">Search</button>
+  </div>
+
+  <nav class="nav justify-content-center mt-3">
+    <a class="nav-link" href="/shop">ALL</a>
+    <a class="nav-link" href="/laptops">LAPTOPS</a>
+    <a class="nav-link" href="/desktops">DESKTOPS</a>
+    <a class="nav-link" href="/accessories">ACCESSORIES</a>
+    <a class="nav-link" href="/printers">PRINTERS</a>
+    <a class="nav-link" href="/stationery">STATIONERY</a>
+    <a class="nav-link" href="/electronics">ELECTRONICS</a>
+  </nav>
+
+  <p><b><u>ALL CATEGORIES</u></b></p>
+
+  <div class="row" id="productList">
+    <!-- Product 1 -->
+    <div class="col-md-4 mb-4 product-item">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1600599526069-d1e5b81a0759?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="card-img-top" alt="Business Laptop" style="object-fit: cover; height: 250px;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Business Laptop</h5>
+          <p class="card-text">High-performance laptop for professional use.</p>
+          <p class="text-danger">KSh 80,000</p>
+          <button class="btn btn-primary add-to-cart" data-id="1" data-name="Business Laptop" data-price="80000">
+            <i class="bi bi-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-md-4 mb-4 product-item">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517694591643-5536207a8022?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="card-img-top" alt="Gaming Laptop" style="object-fit: cover; height: 250px;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Gaming Laptop</h5>
+          <p class="card-text">Powerful machine for gamers with high-end graphics.</p>
+          <p class="text-danger">KSh 120,000</p>
+          <button class="btn btn-primary add-to-cart" data-id="2" data-name="Gaming Laptop" data-price="120000">
+            <i class="bi bi-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-md-4 mb-4 product-item">
+      <div class="card">
+        <img src="https://images.unsplash.com/phot-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="card-img-top" alt="Compact Laptop" style="object-fit: cover; height: 250px;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Compact Laptop</h5>
+          <p class="card-text">Sleek and portable laptop for everyday use.</p>
+          <p class="text-danger">KSh 50,000</p>
+          <button class="btn btn-primary add-to-cart" data-id="3" data-name="Compact Laptop" data-price="50000">
+            <i class="bi bi-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-md-4 mb-4 product-item">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587613190349-23b454d1d6a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="card-img-top" alt="2-in-1 Laptop/Tablet" style="object-fit: cover; height: 250px;">
+        <div class="card-body text-center">
+          <h5 class="card-title">2-in-1 Laptop/Tablet</h5>
+          <p class="card-text">Versatile device for work and entertainment.</p>
+          <p class="text-danger">KSh 70,000</p>
+          <button class="btn btn-primary add-to-cart" data-id="4" data-name="2-in-1 Laptop/Tablet" data-price="70000">
+            <i class="bi bi-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="col-md-4 mb-4 product-item">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1591714854876-700627d65651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="card-img-top" alt="Student Laptop" style="object-fit: cover; height: 250px;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Student Laptop</h5>
+          <p class="card-text">Affordable and durable laptop for students.</p>
+          <p class="text-danger">KSh 35,000</p>
+          <button class="btn btn-primary add-to-cart" data-id="5" data-name="Student Laptop" data-price="35000">
+            <i class="bi bi-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="col-md-4 mb-4 product-item">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1583916575022-7a63004f44c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="card-img-top" alt="High-end Ultrabook" style="object-fit: cover; height: 250px;">
+        <div class="card-body text-center">
+          <h5 class="card-title">High-end Ultrabook</h5>
+          <p class="card-text">Ultra-slim, high-performance laptop for professionals.</p>
+          <p class="text-danger">KSh 100,000</p>
+          <button class="btn btn-primary add-to-cart" data-id="6" data-name="High-end Ultrabook" data-price="100000">
+            <i class="bi bi-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart View -->
+  <div id="cartView" class="mt-5">
+    <h3>Your Cart</h3>
+    <ul id="cartItems" class="list-group mb-3"></ul>
+    <p><b>Total: </b><span id="cartTotal">KSh 0</span></p>
+    <button class="btn btn-success" onclick="checkout()">Checkout</button>
+  </div>
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function updateCartView() {
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price * item.quantity;
+      cartItems.innerHTML += `
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          ${item.name} (x${item.quantity})
+          <span>KSh ${item.price * item.quantity}</span>
+          <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+        </li>`;
+    });
+
+    cartTotal.textContent = `KSh ${total}`;
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  document.querySelectorAll('.add-to-cart').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const id = e.target.getAttribute('data-id');
+      const name = e.target.getAttribute('data-name');
+      const price = parseInt(e.target.getAttribute('data-price'), 10);
+
+      const existingItem = cart.find((item) => item.id === id);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ id, name, price, quantity: 1 });
+      }
+
+      updateCartView();
+    });
+  });
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartView();
+  }
+
+  function checkout() {
+    if (cart.length === 0) {
+      alert('Your cart is empty.');
+      return;
+    }
+    alert('Checkout successful!');
+    localStorage.removeItem('cart');
+    cart.length = 0;
+    updateCartView();
+  }
+
+  updateCartView();
+
+  // Scroll to Top Button Script
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = 'flex';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>

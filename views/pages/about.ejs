@@ -1,0 +1,64 @@
+<div class="text-center">
+  <h2>About Us</h2>
+  <p>Tawalee Holdings Limited is a leader in office supplies, IT services, branding, and more. We pride ourselves on delivering quality products and exceptional customer service. Whether you need office stationery, IT solutions, branding materials, or commercial printing, we are here to meet your needs.</p>
+
+  <div class="mt-4">
+    <h3>Our Services</h3>
+    <p>Explore our wide range of services that cater to all your business and IT needs:</p>
+
+    <!-- Service Images Section -->
+    <div class="service-images">
+      <!-- Office Supplies -->
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Office Supplies" class="service-image" style="width: 100%; height: 200px; object-fit: cover;">
+        <h4>Office Supplies</h4>
+        <p>From stationery to office furniture, we provide all your office essentials.</p>
+      </div>
+
+      <!-- IT Services -->
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="IT Services" class="service-image" style="width: 100%; height: 200px; object-fit: cover;">
+        <h4>IT Services</h4>
+        <p>We offer comprehensive IT solutions including networking, security, and support.</p>
+      </div>
+
+      <!-- Branding & Marketing -->
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Branding & Marketing" class="service-image" style="width: 100%; height: 200px; object-fit: cover;">
+        <h4>Branding & Marketing</h4>
+        <p>Enhance your brand's presence with our creative branding and marketing strategies.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <h3>Our Location</h3>
+    <p>We are located at <strong>KILIMANI, FATIMA COURT, Suite 010, Nairobi, Kenya</strong>, where you can visit us to discuss your project, place orders, or request samples of our work. Come and experience top-notch service and high-quality products in person!</p>
+  </div>
+
+  <div class="mt-5">
+    <h3>Why Choose Tawalee Holdings Limited?</h3>
+    <p>With years of experience in multiple industries, our team is committed to providing unmatched quality and service. We work closely with our clients to ensure every service or product meets their unique business requirements. Whether you're looking for something simple or highly customized, we’ve got you covered.</p>
+  </div>
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
+<!-- Scroll to Top Button Script -->
+<script>
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = 'flex';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>

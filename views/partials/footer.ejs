@@ -1,0 +1,188 @@
+<footer class="bg-dark-blue text-center py-4">
+  <style>
+    /* Footer styling */
+    .bg-dark-blue {
+      background-color: #002863;
+      color: white;
+    }
+
+    .footer-logo {
+      max-height: 120px;
+    }
+
+    /* Updated paragraph styles for better contrast */
+    .footer-paragraph {
+      color: white;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Quick Links and Contact sections */
+    .list-unstyled li {
+      margin-bottom: 8px;
+    }
+
+    .list-unstyled a {
+      color: #FFD700; /* Light orange for links */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .list-unstyled a:hover {
+      color: #FF7F00; /* Darker orange on hover */
+      text-decoration: underline;
+    }
+
+    .bi {
+      font-size: 1.2rem;
+      color: #FFD700; /* Light orange for icons */
+    }
+
+    /* Social Media Icons */
+    .text-white i {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Footer bottom text */
+    .mt-4 {
+      border-top: 1px solid #FFD700; /* Light orange line */
+      padding-top: 15px;
+    }
+
+    /* Scroll to Top Button */
+    #scrollToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #FF7F00; /* Dark orange background */
+      color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #FFD700; /* Light orange on hover */
+      color: black;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .footer-paragraph {
+        font-size: 0.9rem;
+      }
+
+      .list-unstyled li {
+        margin-bottom: 6px;
+      }
+
+      .footer-logo {
+        max-height: 80px;
+      }
+    }
+
+    /* Social Media Icon Colors */
+    .facebook {
+      color: #1877F2; /* Facebook blue */
+    }
+
+    .twitter {
+      color: #1DA1F2; /* Twitter blue */
+    }
+
+    .instagram {
+      color: #E4405F; /* Instagram pinkish-red */
+    }
+
+    .whatsapp {
+      color: #25D366; /* WhatsApp green */
+    }
+
+    /* Ensuring icon size remains large and adjusting hover effect */
+    .text-white i {
+      font-size: 2rem; /* Adjusted size for better visibility */
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect with larger color change */
+    .facebook:hover {
+      color: #0c5b9e; /* Darker blue on hover */
+    }
+
+    .twitter:hover {
+      color: #1A91DA; /* Darker blue on hover */
+    }
+
+    .instagram:hover {
+      color: #C13584; /* Darker pinkish-red on hover */
+    }
+
+    .whatsapp:hover {
+      color: #128C7E; /* Darker green on hover */
+    }
+
+    /* Hover scale effect */
+    .text-white i:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+  <div class="container">
+    <!-- Logo Section -->
+    <div class="mb-3">
+      <img src="/assets/images/tawalee-logo.png" alt="Tawalee Holdings Limited Logo" class="footer-logo">
+    </div>
+    <!-- About Section -->
+    <p class="footer-paragraph">
+      Tawalee Holdings Limited provides comprehensive office supplies, IT services, branding solutions, and more to meet your business needs. 
+      We are committed to delivering quality and innovation.
+    </p>
+    <!-- Quick Links -->
+    <div class="row mt-3">
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Contact Information -->
+      <div class="col-md-4">
+        <h5>Contact Us</h5>
+        <p class="footer-paragraph mb-1"><i class="bi bi-telephone"></i> Phone: +254 742 002 872</p>
+        <p class="footer-paragraph mb-1"><i class="bi bi-envelope"></i> Email: info@tawaleeholdings.co.ke</p>
+        <p class="footer-paragraph"><i class="bi bi-geo-alt"></i> KILIMANI, FATIMA COURT, Suite 010, Nairobi, Kenya</p>
+      </div>
+      <!-- Social Media -->
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="mt-4">
+      <p class="footer-paragraph mb-0">© 2025 Tawalee Holdings Limited. All rights reserved.</p>
+      <p class="footer-paragraph small">Developed by <a href="https://richardngasike.netlify.app/">Richard Ngasike</a>.</p>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</footer>

@@ -1,0 +1,217 @@
+<!-- Shop Page -->
+<div class="text-center mt-5">
+    <h2>Shop with Us</h2>
+    <p>Explore our range of premium products available for purchase.</p>
+
+    <!-- Search Input -->
+    <div class="mt-4 mb-4">
+        <input type="text" id="searchInput" class="form-control w-50 mx-auto" placeholder="Search for products..." onkeyup="searchProducts()">
+    </div>
+
+    <nav class="nav justify-content-center mt-3">
+        <a class="nav-link" href="/shop">ALL</a>
+        <a class="nav-link" href="/trousers">TROUSERS</a>
+        <a class="nav-link" href="/jackets">JACKETS</a>
+        <a class="nav-link" href="/school">SCHOOL</a>
+        <a class="nav-link" href="/male">MALE</a>
+        <a class="nav-link" href="/female">FEMALE</a>
+        <a class="nav-link" href="/shirts">SHIRTS</a>
+      </nav>
+
+    <p><b><u>MALE OUTFITS</u></b></p>
+    <div class="row" id="productList">
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/mensuit.jpg" class="card-img-top" alt="Men's Suit">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Classic Men's Suit</h5>
+                    <p class="card-text">Elegant and stylish suit, perfect for formal events.</p>
+                    <p class="text-danger">KSh 7,500</p>
+                    <button class="btn btn-primary add-to-cart" data-id="1" data-name="Classic Men's Suit" data-price="7500">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/dem2.jpg" class="card-img-top" alt="Men's Jeans">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Denim Jeans</h5>
+                    <p class="card-text">Comfortable and durable jeans for everyday wear.</p>
+                    <p class="text-danger">KSh 9,000</p>
+                    <button class="btn btn-primary add-to-cart" data-id="2" data-name="Denim Jeans" data-price="9000">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/menpolo.jpg" class="card-img-top" alt="Men's Polo Shirt">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Polo Shirt</h5>
+                    <p class="card-text">Trendy and durable Polo shirt for a bold look.</p>
+                    <p class="text-danger">KSh 800</p>
+                    <button class="btn btn-primary add-to-cart" data-id="3" data-name="Polo Shirt" data-price="800">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/african.jpg" class="card-img-top" alt="African T-Shirt">
+                <div class="card-body text-center">
+                    <h5 class="card-title">African T-shirt</h5>
+                    <p class="card-text">Well-designed African t-shirts for both genders.</p>
+                    <p class="text-danger">KSh 500</p>
+                    <button class="btn btn-primary add-to-cart" data-id="4" data-name="African T-shirt" data-price="500">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/reflector.jpg" class="card-img-top" alt="Reflector Jacket">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Reflector Jacket</h5>
+                    <p class="card-text">Comfortable reflectors suitable for jobs like Boda and traffic police.</p>
+                    <p class="text-danger">KSh 3,200</p>
+                    <button class="btn btn-primary add-to-cart" data-id="5" data-name="Reflector Jacket" data-price="3200">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/tshirtmale.jpg" class="card-img-top" alt="Men's T-Shirt">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Male T-shirt</h5>
+                    <p class="card-text">Stylish t-shirt for office wear.</p>
+                    <p class="text-danger">KSh 900</p>
+                    <button class="btn btn-primary add-to-cart" data-id="6" data-name="Male T-shirt" data-price="900">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart View -->
+    <div id="cartView" class="mt-5">
+        <h3>Your Cart</h3>
+        <ul id="cartItems" class="list-group mb-3"></ul>
+        <p><b>Total: </b><span id="cartTotal">KSh 0</span></p>
+        <button class="btn btn-success" onclick="checkout()">Checkout</button>
+    </div>
+    <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
+<script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Update the cart view
+    function updateCartView() {
+        const cartItems = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+            cartItems.innerHTML += `
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    ${item.name} (x${item.quantity})
+                    <span>KSh ${item.price * item.quantity}</span>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+                </li>`;
+        });
+
+        cartTotal.textContent = `KSh ${total}`;
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Add item to cart
+    document.querySelectorAll('.add-to-cart').forEach((button) => {
+        button.addEventListener('click', (e) => {
+            const id = e.target.getAttribute('data-id');
+            const name = e.target.getAttribute('data-name');
+            const price = parseInt(e.target.getAttribute('data-price'), 10);
+
+            const existingItem = cart.find((item) => item.id === id);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+            }
+
+            updateCartView();
+        });
+    });
+
+    // Remove item from cart
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCartView();
+    }
+
+    // Checkout functionality
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty.');
+            return;
+        }
+        alert('Checkout successful!');
+        localStorage.removeItem('cart');
+        cart.length = 0;
+        updateCartView();
+    }
+
+    updateCartView();
+
+    // Search functionality for filtering products
+    function searchProducts() {
+        var searchQuery = document.getElementById('searchInput').value.toLowerCase();
+        var products = document.querySelectorAll('.product-item');
+
+        products.forEach(function(product) {
+            var title = product.querySelector('.card-title').textContent.toLowerCase();
+            var description = product.querySelector('.card-text').textContent.toLowerCase();
+
+            if (title.includes(searchQuery) || description.includes(searchQuery)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+
+    // Trigger the search function on 'keyup' event for dynamic filtering
+    document.getElementById('searchInput').addEventListener('keyup', searchProducts);
+
+    // Scroll to Top Button Script
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.style.display = 'flex';
+  } else {
+    scrollToTopBtn.style.display = 'none';
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>

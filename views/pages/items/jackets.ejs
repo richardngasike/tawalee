@@ -1,0 +1,213 @@
+<!-- Shop Page -->
+<div class="text-center mt-5">
+    <h2>Shop with Us</h2>
+    <p>Explore our premium collection of jackets and hoodies.</p>
+  
+    <!-- Search Input -->
+    <div class="mt-4 mb-4">
+        <input type="text" id="searchInput" class="form-control w-50 mx-auto" placeholder="Search for products..." onkeyup="searchProducts()">
+    </div>
+  
+    <nav class="nav justify-content-center mt-3">
+        <a class="nav-link" href="/shop">ALL</a>
+        <a class="nav-link" href="/trousers">TROUSERS</a>
+        <a class="nav-link" href="/jackets">JACKETS</a>
+        <a class="nav-link" href="/school">SCHOOL</a>
+        <a class="nav-link" href="/male">MALE</a>
+        <a class="nav-link" href="/female">FEMALE</a>
+        <a class="nav-link" href="/shirts">SHIRTS</a>
+      </nav>
+    
+    <p><b><u>JACKETS AND HOODIES</u></b></p>
+    <div class="row" id="productList">
+        <!-- Product 1 -->
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/leather1.jpg" class="card-img-top" alt="Leather Jacket">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Leather Jacket</h5>
+                    <p class="card-text">Classic leather jacket for a bold and timeless look.</p>
+                    <p class="text-danger">KSh 7,500</p>
+                    <button class="btn btn-primary add-to-cart" data-id="1" data-name="Leather Jacket" data-price="7500">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Product 2 -->
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/casualhoodie.jpg" class="card-img-top" alt="Casual Hoodie">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Casual Hoodie</h5>
+                    <p class="card-text">Comfortable hoodie for everyday casual wear.</p>
+                    <p class="text-danger">KSh 3,200</p>
+                    <button class="btn btn-primary add-to-cart" data-id="2" data-name="Casual Hoodie" data-price="3200">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Product 3 -->
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/denim.jpg" class="card-img-top" alt="Denim Jacket">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Denim Jacket</h5>
+                    <p class="card-text">Trendy denim jacket for a versatile and stylish outfit.</p>
+                    <p class="text-danger">KSh 4,800</p>
+                    <button class="btn btn-primary add-to-cart" data-id="3" data-name="Denim Jacket" data-price="4800">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Product 4 -->
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/windbreaker.jpg" class="card-img-top" alt="Windbreaker Jacket">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Windbreaker Jacket</h5>
+                    <p class="card-text">Lightweight windbreaker jacket for outdoor adventures.</p>
+                    <p class="text-danger">KSh 5,000</p>
+                    <button class="btn btn-primary add-to-cart" data-id="4" data-name="Windbreaker Jacket" data-price="5000">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Product 5 -->
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/puffer.jpg" class="card-img-top" alt="Puffer Jacket">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Puffer Jacket</h5>
+                    <p class="card-text">Warm and stylish puffer jacket for chilly weather.</p>
+                    <p class="text-danger">KSh 6,500</p>
+                    <button class="btn btn-primary add-to-cart" data-id="5" data-name="Puffer Jacket" data-price="6500">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Product 6 -->
+        <div class="col-md-4 mb-4 product-item">
+            <div class="card">
+                <img src="assets/images/knitted.jpg" class="card-img-top" alt="Knitted Sweater">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Knitted Sweater</h5>
+                    <p class="card-text">Soft and cozy sweater for a relaxed and warm feel.</p>
+                    <p class="text-danger">KSh 3,000</p>
+                    <button class="btn btn-primary add-to-cart" data-id="6" data-name="Knitted Sweater" data-price="3000">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart View -->
+    <div id="cartView" class="mt-5">
+        <h3>Your Cart</h3>
+        <ul id="cartItems" class="list-group mb-3"></ul>
+        <p><b>Total: </b><span id="cartTotal">KSh 0</span></p>
+        <button class="btn btn-success" onclick="checkout()">Checkout</button>
+    </div>
+    <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
+<script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function updateCartView() {
+        const cartItems = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+            cartItems.innerHTML += `
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    ${item.name} (x${item.quantity})
+                    <span>KSh ${item.price * item.quantity}</span>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+                </li>`;
+        });
+
+        cartTotal.textContent = `KSh ${total}`;
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach((button) => {
+        button.addEventListener('click', (e) => {
+            const id = e.target.getAttribute('data-id');
+            const name = e.target.getAttribute('data-name');
+            const price = parseInt(e.target.getAttribute('data-price'), 10);
+
+            const existingItem = cart.find((item) => item.id === id);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+            }
+
+            updateCartView();
+        });
+    });
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCartView();
+    }
+
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty.');
+            return;
+        }
+        alert('Checkout successful!');
+        localStorage.removeItem('cart');
+        cart.length = 0;
+        updateCartView();
+    }
+
+    updateCartView();
+
+    function searchProducts() {
+        var input = document.getElementById('searchInput').value.toLowerCase();
+        var products = document.getElementsByClassName('product-item');
+
+        for (var i = 0; i < products.length; i++) {
+            var productName = products[i].querySelector('.card-title').textContent.toLowerCase();
+            if (productName.indexOf(input) > -1) {
+                products[i].style.display = '';
+            } else {
+                products[i].style.display = 'none';
+            }
+        }
+    }
+
+    // Scroll to Top Button Script
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.style.display = 'flex';
+  } else {
+    scrollToTopBtn.style.display = 'none';
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>

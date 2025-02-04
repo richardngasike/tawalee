@@ -1,0 +1,54 @@
+<div class="text-center">
+  <h2>Contact Us</h2>
+  <p>We would love to hear from you! Please reach out to us using the contact details below or fill out the form, and we'll get back to you as soon as possible.</p>
+
+  <!-- Contact Form -->
+  <form action="/submit-contact" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Your Message</label>
+      <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <!-- Contact Information -->
+  <div class="mt-4">
+    <h3>Our Contact Details</h3>
+    <p>
+      <strong>Address:</strong> KILIMANI, FATIMA COURT, Suite 010, P.O Box 2064-00200, Nairobi, Kenya<br>
+      <strong>Phone:</strong> +254 742 002 872<br>
+      <strong>Email:</strong> <a href="mailto:info@tawaleeholdings.co.ke">info@tawaleeholdings.co.ke</a><br>
+    </p>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
+<!-- Scroll to Top Button Script -->
+<script>
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = 'flex';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</div>
